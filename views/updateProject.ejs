@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Project</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="">
+            <h1>Project upgrade</h1>
+            <a href="/">Back to projects list</a>
+        </div>
+        <form class="" action="/project/<%= project.id %>/update" method="POST">
+            <div class="">
+                <label for="name" class="">Name</label>
+                <input class="" type="text" name="name"
+                    id="name" value="<%= project.description %>">
+            </div>
+            
+            <div class="">
+                <label for="description" class="">Description</label>
+                <input class="" type="text" name="description" id="description"
+                    value="<%= project.description %>">
+            </div>
+            <div class="">
+                <label for="description" class="">Users</label>
+                <input class="" type="text" name="users" id="users"
+                    value="<%= project.users %>">
+            </div>
+            
+            <div class="">
+                <button type="submit"
+                    >Update project</button>
+                <button type="button"
+                    onclick="deleteP()">Delete</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        async function deleteP() {
+            try {
+                const projectId = "<%= project.id %>";
+                const response = await fetch(`/project/${projectId}`, {
+                    method: 'DELETE'
+                });
+                window.location.href = '/';
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>New Project</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="">
+            <h1 class="">New Project</h1>
+            <a href="/" class="" >Back to projects list</a>
+        </div>
+        <form class="" style="display: flex; flex-direction: column; gap: 10px;" action="/project" method="POST">
+            <div class="">
+                <label for="name" class="">Project name</label>
+                <input  class="" type="text" name="name" id="name">
+            </div>
+            <div class="">
+                <label for="description" class="">Description</label>
+                <input style="width: 300px;" class="" type="text" name="description" id="description">
+            </div>
+            <div class="">
+                <label for="users" class="">User List(separated by commas)</label>
+                <input class="" type="text" name="users" id="users">
+            </div>
+            <div class="">
+                <button class="" type="submit" class="">Add</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
