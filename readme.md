@@ -26,5 +26,5 @@ Po sklonowaniu repozytorium należy wykonać następujące kroki:
 
 3. Uruchomienie aplikacji za pomocą polecenia:
     ```
-    node app.js
+    node server.js
     ```
